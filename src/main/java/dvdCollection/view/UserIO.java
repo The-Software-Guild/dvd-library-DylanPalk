@@ -1,4 +1,4 @@
-package dvdCollection.ui;
+package dvdCollection.view;
 
 public interface UserIO {
 

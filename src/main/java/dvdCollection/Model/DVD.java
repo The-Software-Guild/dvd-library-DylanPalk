@@ -1,4 +1,4 @@
-package dvdCollection.dto;
+package dvdCollection.Model;
 
 public class DVD {
     private String title;

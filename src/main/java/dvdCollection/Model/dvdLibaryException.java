@@ -1,4 +1,4 @@
-package dvdCollection.dao;
+package dvdCollection.Model;
 
 public class dvdLibaryException extends Exception {
 

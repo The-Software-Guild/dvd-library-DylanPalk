@@ -1,13 +1,13 @@
-package dvdCollection.class_roster;
+package dvdCollection.Runner;
 
 import dvdCollection.controller.dvdLibaryController;
-import dvdCollection.dao.dvdLibaryFileImpl;
-import dvdCollection.dao.dvdLibary;
-import dvdCollection.ui.dvdView;
-import dvdCollection.ui.UserIO;
-import dvdCollection.ui.UserIOConsoleImpl;
+import dvdCollection.Model.dvdLibaryFileImpl;
+import dvdCollection.Model.dvdLibary;
+import dvdCollection.view.dvdView;
+import dvdCollection.view.UserIO;
+import dvdCollection.view.UserIOConsoleImpl;
 
-public class App {
+public class dvdRunner {
 
     public static void main(String[] args) {
             UserIO myIo = new UserIOConsoleImpl();

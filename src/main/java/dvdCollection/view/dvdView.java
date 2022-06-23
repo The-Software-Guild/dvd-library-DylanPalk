@@ -1,6 +1,6 @@
-package dvdCollection.ui;
+package dvdCollection.view;
 
-import dvdCollection.dto.DVD;
+import dvdCollection.Model.DVD;
 
 
 import java.util.List;
@@ -77,7 +77,7 @@ public class dvdView {
     }
 
     public String getDVDIdChoice() {
-        return io.readString("Please enter the Student ID.");
+        return io.readString("Please enter the DVD ID.");
     }
 
     public String getDvdTitle() {
@@ -87,11 +87,11 @@ public class dvdView {
     public String getField() {
         return io.readString("Please enter a field to edit. " +
                 " 1. title" +
-                "2. release date" +
-                "3. director name" +
-                "4. Studio Name " +
-                "5. MPAA rating" +
-                "6. furtherNotes");
+                " 2. release date" +
+                " 3. director name" +
+                " 4. Studio Name " +
+                " 5. MPAA rating" +
+                " 6. furtherNotes");
     }
 
 
@@ -111,16 +111,21 @@ public class dvdView {
     }
 
     public void displayDVDTitle(List<DVD> DVDList, String title) {
-        for (DVD DVD : DVDList) {
-            if(title.equals(DVD.getTitle())){
-                io.print("DVD ID: " + DVD.getDvdID());
-                io.print("DVD release date: " + DVD.getReleaseDate());
-                io.print("DVD director name: " + DVD.getDirectorName());
-                io.print("DVD studio name: " + DVD.getStudio());
-                io.print("DVD userOpinion/Rating: " + DVD.getUserOpionion() + "\n");
+        if (DVDList != null) {
+            for (DVD DVD : DVDList) {
+                if (title.equals(DVD.getTitle())) {
+                    io.print("DVD ID: " + DVD.getDvdID());
+                    io.print("DVD release date: " + DVD.getReleaseDate());
+                    io.print("DVD director name: " + DVD.getDirectorName());
+                    io.print("DVD studio name: " + DVD.getStudio());
+                    io.print("DVD userOpinion/Rating: " + DVD.getUserOpionion() + "\n");
+                }
             }
+            io.readString("Please hit enter to continue.");
         }
-        io.readString("Please hit enter to continue.");
+        else{
+            System.out.println("No DVDs");
+        }
     }
 
     public void editDVDInformation(DVD DVD, String field, String value){

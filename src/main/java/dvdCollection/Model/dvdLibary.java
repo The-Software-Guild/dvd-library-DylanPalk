@@ -1,6 +1,4 @@
-package dvdCollection.dao;
-
-import dvdCollection.dto.DVD;
+package dvdCollection.Model;
 
 import java.util.List;
 

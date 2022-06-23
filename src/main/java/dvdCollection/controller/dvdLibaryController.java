@@ -1,11 +1,11 @@
 package dvdCollection.controller;
 
-import dvdCollection.dao.dvdLibaryException;
-import dvdCollection.dao.dvdLibary;
-import dvdCollection.dto.DVD;
-import dvdCollection.ui.dvdView;
-import dvdCollection.ui.UserIO;
-import dvdCollection.ui.UserIOConsoleImpl;
+import dvdCollection.Model.dvdLibaryException;
+import dvdCollection.Model.dvdLibary;
+import dvdCollection.Model.DVD;
+import dvdCollection.view.dvdView;
+import dvdCollection.view.UserIO;
+import dvdCollection.view.UserIOConsoleImpl;
 
 import java.util.List;
 
